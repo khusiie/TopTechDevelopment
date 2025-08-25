@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Card from "../components/Card";
 import ServicesSection from "../components/ServiceSection";
 import Work from "../components/Work";
-import WhoWeAre from "../components/whoweare";
+import WhoWeAre from "../components/WhoWeAre";
 import Faqs from "../components/Faqs";
 import PortfolioSection from "../components/Portfolio";
 import Members from "../components/Members";
