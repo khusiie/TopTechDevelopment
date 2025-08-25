@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { FaLightbulb, FaTools, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-=======
-import React, { useState } from 'react';
->>>>>>> 6f07bd7c4a22e45c858de1e99c8987a6800b5a3d
 
 const Hero = () => {
   const images = [
@@ -14,15 +10,9 @@ const Hero = () => {
   ];
 
   const [bgIndex, setBgIndex] = useState(0);
-<<<<<<< HEAD
-  const [typeKey, setTypeKey] = useState(0); // this will force re-render of Typewriter
 
   const changeBackground = () => {
-    setBgIndex((prev) => {
-      const next = (prev + 1) % images.length;
-      setTypeKey((prevKey) => prevKey + 1); // trigger typewriter reset
-      return next;
-    });
+    setBgIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const buttons = [
@@ -32,78 +22,33 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] overflow-hidden py-10 font-rajdhani">
-
-      <div
-        className="absolute inset-0 transition-all duration-700"
-        style={{
-          backgroundImage: `url(${images[bgIndex]})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 0,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/70 to-indigo-900/80" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-between px-6 md:px-16 text-white min-h-[calc(100vh-5rem)]">
-        <div className="max-w-4xl w-full">
-          <p className="uppercase text-base tracking-wider text-gray-300">Welcome to TopTech</p>
-
-       <h1 className="text-4xl md:text-6xl font-extrabold mt-4 leading-tight text-white">
-      <Typewriter
-        words={['TOP IT SOLUTION AGENCY IN THE WORLD']}
-        loop={0}                
-        cursor
-        cursorStyle="|"
-        typeSpeed={70}
-        deleteSpeed={0}          
-        delaySpeed={1000}
-      />
-    </h1>
-
-          <p className="text-gray-200 mt-6 text-lg">
-            And In Order To Make A Business, Brand Advertising And Marketing Plays An Important Role.
-            Similarly, In Making Cultivation Business.
-          </p>
-
-          <div className="flex flex-wrap gap-4 mt-8">
-            <a href="#" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">
-              How IT Works
-            </a>
-            <a href="#" className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-6 rounded transition duration-300">
-              IT Services
-            </a>
-          </div>
-        </div>
-
-        {/* Change BG Button */}
-        <div className="hidden md:block relative z-10">
-=======
-
-  const changeBackground = () => {
-    setBgIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  return (
     <section
-      className="relative flex items-center py-4 justify-between px-6 md:px-16 overflow-hidden text-white min-h-[calc(100vh-5rem)] z-10 font-rajdhani"
+      className="relative flex items-center justify-between px-6 md:px-16 overflow-hidden text-white min-h-[calc(100vh-5rem)] z-10 font-rajdhani"
       style={{
         backgroundImage: `url(${images[bgIndex]})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      {/* Overlay (optional for better text visibility) */}
+      {/* Overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/70 to-indigo-900/80 z-0" />
 
       {/* Left Content */}
       <div className="relative z-10 max-w-4xl w-full">
-        <p className="uppercase text-sm tracking-wider text-gray-300">Welcome to TopTech</p>
+        <p className="uppercase text-sm tracking-wider text-gray-300">
+          Welcome to TopTech
+        </p>
+
         <h1 className="text-4xl md:text-6xl font-extrabold mt-4 leading-tight text-white">
-          TOP IT SOLUTION AGENCY <br />
-          <span className="text-white">IN THE WORLD</span>
+          <Typewriter
+            words={["TOP IT SOLUTION AGENCY IN THE WORLD"]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={0}
+            delaySpeed={1000}
+          />
         </h1>
 
         <p className="text-gray-200 mt-6 text-lg">
@@ -112,30 +57,32 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-wrap gap-4 mt-8">
-          <a href="#" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition-all duration-300 hover:shadow-lg">
+          <a
+            href="#"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300"
+          >
             How IT Works
           </a>
-          <a href="#" className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-6 rounded transition-all duration-300">
+          <a
+            href="#"
+            className="border border-white hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-6 rounded transition duration-300"
+          >
             IT Services
           </a>
         </div>
       </div>
 
-      {/* Right Image & Play Button */}
+      {/* Right Side: Background Switch Button */}
       <div className="hidden md:block relative z-10">
-        <div className="relative">
->>>>>>> 6f07bd7c4a22e45c858de1e99c8987a6800b5a3d
-          <button
-            onClick={changeBackground}
-            className="absolute top-20 right-5 border-2 border-white text-white font-bold rounded-full w-24 h-24 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg"
-          >
-            <span className="text-xl">▶</span>
-          </button>
-        </div>
+        <button
+          onClick={changeBackground}
+          className="absolute top-20 right-5 border-2 border-white text-white font-bold rounded-full w-24 h-24 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg"
+        >
+          <span className="text-xl">▶</span>
+        </button>
       </div>
-<<<<<<< HEAD
 
-      {/* Right Side Buttons */}
+      {/* Floating Buttons on Right Side */}
       <div className="hidden md:flex flex-col items-end gap-4 absolute top-1/3 right-6 z-10">
         {buttons.map((item, index) => (
           <div
@@ -151,8 +98,6 @@ const Hero = () => {
           </div>
         ))}
       </div>
-=======
->>>>>>> 6f07bd7c4a22e45c858de1e99c8987a6800b5a3d
     </section>
   );
 };

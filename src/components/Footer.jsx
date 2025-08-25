@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaArrowUp } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
@@ -24,13 +24,8 @@ const Footer = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-[#06142e] text-white py-20 font-rajdhani">
-=======
     <footer className="bg-[#06142e] text-white py-16 font-rajdhani">
->>>>>>> 6f07bd7c4a22e45c858de1e99c8987a6800b5a3d
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
-        
         {/* Logo and Description */}
         <div className="md:col-span-2">
           <div className="flex items-center space-x-4 mb-6">
@@ -55,7 +50,10 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-gray-300">
             {["About Us", "Our Team", "Pricing Plan", "Latest Blog", "Careers"].map((item) => (
               <li key={item}>
-                <a href="#" className="flex items-center space-x-4 hover:text-blue-900 transition-colors duration-300">
+                <a
+                  href="#"
+                  className="flex items-center space-x-4 hover:text-blue-900 transition-colors duration-300"
+                >
                   <span className="text-blue-900">→</span>
                   <span>{item}</span>
                 </a>
@@ -70,7 +68,10 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-gray-300">
             {["IT Solutions", "IT Service", "Digital Marketing", "Hosting", "SEO Marketing"].map((item) => (
               <li key={item}>
-                <a href="#" className="flex items-center space-x-4 hover:text-blue-900 transition-colors duration-300">
+                <a
+                  href="#"
+                  className="flex items-center space-x-4 hover:text-blue-900 transition-colors duration-300"
+                >
                   <span className="text-blue-900">→</span>
                   <span>{item}</span>
                 </a>
@@ -106,10 +107,18 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p className="mb-4 md:mb-0">© 2024 Toptech. Designed By Dream IT Solution</p>
           <div className="flex items-center space-x-3">
-            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white"><FaFacebookF /></a>
-            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white"><FaXTwitter /></a>
-            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white"><FaLinkedinIn /></a>
-            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white"><FaPinterestP /></a>
+            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white">
+              <FaXTwitter />
+            </a>
+            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white">
+              <FaPinterestP />
+            </a>
           </div>
         </div>
       </div>
